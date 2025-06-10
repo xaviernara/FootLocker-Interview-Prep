@@ -2,8 +2,8 @@ package com.example.interviewprep.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.interviewprep.dao.ProfileDAO
-import com.example.interviewprep.repo.db.ProfileDatabase
+import com.example.interviewprep.db.dao.ProfileDAO
+import com.example.interviewprep.db.ProfileDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,5 +26,4 @@ object DBModule {
     fun providesProfileDao(profileDatabase: ProfileDatabase): ProfileDAO {
         return profileDatabase.profileDao()
     }
-
 }

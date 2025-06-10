@@ -8,10 +8,12 @@ import androidx.room.PrimaryKey
 data class ProfilePage(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
+
     @ColumnInfo(name = "data_list")
     var `data`: List<Data?>? = null,
     var page: Int? = null,
     var perPage: Int? = null,
+
     @ColumnInfo(name = "support_data")
     var support: Support? = null,
     var total: Int? = null,

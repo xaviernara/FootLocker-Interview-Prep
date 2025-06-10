@@ -1,4 +1,4 @@
-package com.example.interviewprep.di
+package com.example.interviewprep
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

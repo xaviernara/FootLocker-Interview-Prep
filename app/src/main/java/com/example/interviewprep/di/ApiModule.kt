@@ -1,6 +1,6 @@
 package com.example.interviewprep.di
 
-import com.example.interviewprep.repo.api.ProfileApi
+import com.example.interviewprep.network.ProfileApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,9 +18,7 @@ object ApiModule {
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(BASEURL).addConverterFactory(GsonConverterFactory.create())
-            .build()
+        return Retrofit.Builder().baseUrl(BASEURL).addConverterFactory(GsonConverterFactory.create()).build()
     }
 
     @Provides

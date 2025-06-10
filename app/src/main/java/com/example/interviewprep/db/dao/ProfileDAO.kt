@@ -1,4 +1,4 @@
-package com.example.interviewprep.dao
+package com.example.interviewprep.db.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface ProfileDAO {
 
     @Query("SELECT * FROM profile_table")
-    fun getProfiles(id: Int): Flow<ProfilePage>
+    fun getAllProfiles(): Flow<List<ProfilePage>>
 
     @Insert
     fun insertProfile(profilePage: ProfilePage)
